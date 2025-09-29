@@ -1,0 +1,142 @@
+/* Color Palette: Elegant Grey (Minimal + Luxury Feel) */
+:root {
+  --primary-color: #2F2F2F;   /* Dark Charcoal */
+  --secondary-color: #4D4D4D; /* Medium Grey */
+  --background-color: #F5F5F5;/* Light Grey White */
+  --button-color: #1C1C1C;    /* Deep Black */
+  --text-color: #333333;      /* Standard Text Grey */
+}
+
+/* --- SERVICES SECTION STYLES --- */
+
+.services-sections {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 4rem 2rem;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.services-headings {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 4rem;
+}
+
+/* GRID LAYOUT */
+.services-grids {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CARD LINK & CONTAINER */
+.service-card-links {
+  display: block;
+  text-decoration: none;
+  flex: 1 1 300px;
+}
+
+.service-cards {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
+  will-change: transform;
+}
+
+.service-cards:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.service-image-containers {
+  height: 250px;
+  overflow: hidden;
+}
+
+.service-images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-out;
+}
+
+.service-cards:hover .service-images {
+  transform: scale(1.05);
+}
+
+/* Content Area */
+.service-contents {
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+}
+
+.service-titles {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.service-descriptions {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-ctas {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  display: inline-flex;
+  align-items: center;
+}
+
+.service-cta .arrows {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.service-cards:hover .arrows {
+  transform: translateX(3px);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .services-sections {
+    padding: 3rem 1rem;
+  }
+
+  .services-headings {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .services-grids {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .service-cards {
+    transform: none !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .service-cards:hover {
+    transform: none !important;
+  }
+
+  .service-image-containers {
+    height: 180px;
+  }
+}

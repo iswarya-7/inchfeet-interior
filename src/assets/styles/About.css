@@ -1,0 +1,185 @@
+/* Color Palette: Elegant Grey (Minimal + Luxury Feel) */
+:root {
+  --primary-color: #2f2f2f; /* Dark Charcoal */
+  --secondary-color: #4d4d4d; /* Medium Grey */
+  --background-color: #f5f5f5; /* Light Grey White */
+  --button-color: #1c1c1c; /* Deep Black */
+  --text-color: #333333; /* Standard Text Grey */
+  --hover-color: #555555; /* Slightly lighter hover */
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Left Side: Images --- */
+.about-us-images {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  margin-bottom: 2rem;
+}
+
+.about-us-images img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.sub-image {
+  position: absolute;
+  bottom: -50px;
+  right: -30px;
+  width: 50%;
+  height: 60%;
+  z-index: 2;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 6px;
+  background-color: #fff;
+  border-radius: 14px;
+}
+
+.sub-image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Right Side: Content --- */
+.about-us-content {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.service-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background-color: rgba(77, 77, 77, 0.1); /* secondary with transparency */
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-icon:hover {
+  transform: translateY(-5px);
+}
+
+.service-item p {
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.discover-button {
+  background-color: var(--button-color);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.discover-button:hover {
+  background-color: var(--primary-color);
+}
+
+/* --- Responsive Design --- */
+@media (min-width: 768px) {
+  .about-us-container {
+    flex-direction: row;
+    gap: 4rem;
+    padding: 0rem 2rem;
+  }
+
+  .about-us-images,
+  .about-us-content {
+    flex: 1;
+  }
+}
+@media (max-width: 768px) {
+  .about-us-container {
+    padding-top: 6rem;
+  }
+
+  .about-us-content {
+    order: 1; /* Puts content (title/text) at the top */
+    margin-bottom: 2rem; /* Add space between content and image */
+  }
+
+  .about-us-images {
+    order: 2; /* Pushes image down below the content */
+  }
+}
+@media (max-width: 425px) {
+  .about-us-container {
+    padding-top: 7rem;
+  }
+}
+@media (max-width: 320px) {
+  .about-us-container {
+    padding-top: 7rem;
+  }
+}
