@@ -5,14 +5,13 @@ import "../assets/styles/HomePage.css";
 // import room1 from "../assets/images/room.png";
 import room2 from "../assets/images/room2.jpg";
 import room3 from "../assets/images/room3.jpg";
-import bg from '../assets/images/bg.webp';
-import bg2 from '../assets/images/bg2.webp'
-
-const images = [ room2, room3,bg,bg2];
+import bg from "../assets/images/bg.webp";
+import bg2 from "../assets/images/bg2.webp";
 
 const HomePage = () => {
   const [current, setCurrent] = useState(0);
 
+  const images = [room2, room3, bg, bg2];
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
@@ -23,7 +22,7 @@ const HomePage = () => {
   return (
     <main className="homepage">
       <section
-      id="home"
+        id="home"
         className="hero"
         style={{
           backgroundImage: `linear-gradient(var(--overlay-dark), var(--overlay-dark)), url(${images[current]})`,

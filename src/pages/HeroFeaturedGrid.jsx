@@ -3,37 +3,55 @@ import React, { useRef } from "react";
 import { FaChevronLeft, FaChevronRight, FaShoppingCart } from "react-icons/fa";
 import "../assets/styles/HeroFeaturedGrid.css";
 
+// images
+// ḷight products
+import light from "../assets/images/products/light.jpeg";
+import light2 from "../assets/images/products/light2.jpeg";
+import light3 from "../assets/images/products/light3.jpeg";
+import light4 from "../assets/images/products/light4.jpeg";
+
+// poster
+import poster from "../assets/images/poster3.png";
+
+// extra products
+import product from "../assets/images/product.jpg";
+import product2 from "../assets/images/product2.jpg";
+import product3 from "../assets/images/product3.jpg";
+import product4 from "../assets/images/product4.jpg";
+import product5 from "../assets/images/product5.jpg";
+import product6 from "../assets/images/product6.jpg";
+
 // --- Data ---
 const heroProduct = {
   title: "The Signature Design Package: Luxe Edition",
   description:
     "Experience end-to-end luxury with custom 3D renders, personalized material sourcing, and dedicated project management. Start your dream home today.",
-  image: "src/assets/images/poster3.png",
+  image: poster,
 };
 
 const secondaryProducts = [
   {
     id: 1,
     title: "Smart Home Integration",
-    image: "src/assets/images/products/light.jpeg",
+    image: light,
     price: "2,500",
   },
   {
     id: 2,
     title: "Premium Lighting Kits",
-    image: "src/assets/images/products/light2.jpeg",
+    image: light2,
     price: "800",
   },
   {
     id: 3,
     title: "Exclusive Artwork Prints",
-    image: "src/assets/images/products/light3.jpeg",
+    image: light3,
     price: "450",
   },
   {
     id: 4,
     title: "Eco-Friendly Materials",
-    image: "src/assets/images/products/light4.jpeg",
+    image: light4,
     price: "3,200",
   },
 ];
@@ -45,42 +63,42 @@ const extraProducts = [
     title: "Modernist Sofa Set",
     category: "Living Room",
     price: "$2,800",
-    image: "src/assets/images/product2.jpg",
+    image: product,
   },
   {
     id: 6,
     title: "Luxe Master Bed",
     category: "Bedroom",
     price: "$4,500",
-    image: "src/assets/images/product.jpg",
+    image: product2,
   },
   {
     id: 7,
     title: "Modular Kitchen Unit",
     category: "Kitchen",
     price: "$7,200",
-    image: "src/assets/images/product3.jpg",
+    image: product3,
   },
   {
     id: 8,
     title: "Minimalist Desk",
     category: "Office",
     price: "$950",
-    image: "src/assets/images/product4.jpg",
+    image: product4,
   },
   {
     id: 9,
     title: "Geometric Lamp",
     category: "Accessories",
     price: "$350",
-    image: "src/assets/images/product5.jpg",
+    image: product5,
   },
   {
     id: 10,
     title: "Custom Wardrobe",
     category: "Storage",
     price: "$3,100",
-    image: "src/assets/images/product6.jpg",
+    image: product6,
   },
 ];
 
@@ -90,7 +108,6 @@ const HeroFeaturedGrid = () => {
   const scrollCarousel = (direction) => {
     const carouselElement = scrollerRef.current;
     if (carouselElement) {
-
       // Scroll by the width of 3 cards
       const scrollDistance = carouselElement.offsetWidth / 3;
       carouselElement.scrollBy({
@@ -99,7 +116,6 @@ const HeroFeaturedGrid = () => {
       });
     }
   };
-
 
   return (
     <section id="products" className="featured-section">
