@@ -1,6 +1,6 @@
 import "./App.css";
 import { Footer } from "./components/Footer";
-import HeaderFile from "./components/headerFile";
+import HeaderFile from "./components/HeaderFile";
 import About from "./pages/About";
 import ContactForm from "./pages/ContactForm";
 import DesignGallery from "./pages/DesignGallery";
