@@ -34,7 +34,7 @@
 }
 
 /* Fade animation */
-.fade-in {
+/* .fade-in {
   animation: fade 1s ease-in-out;
 }
 
@@ -45,7 +45,7 @@
   to {
     opacity: 1;
   }
-}
+} */
 .hero-overlay {
   width: 100%;
   height: 100%;
