@@ -317,7 +317,7 @@ const DesignGallery = () => {
   }, [activeFilter]);
 
   return (
-    <section className="gallery-section">
+    <section className="gallery-section" id="design">
       <h2 className="gallery-heading">Ideas for Home Interior Designs</h2>
       <p className="gallery-subtitle">
         Transform your home with these personalized interior design ideas,

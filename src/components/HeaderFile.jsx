@@ -39,8 +39,12 @@ export default function HeaderFile() {
           {/* Button is inside the nav for mobile, but styled separately for desktop */}
           <button
             className="connect-btn"
-           
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {
+              setIsMenuOpen(false),
+                document
+                  .getElementById("contacts")
+                  .scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Connect Now!
           </button>

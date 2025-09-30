@@ -12,6 +12,7 @@ const HomePage = () => {
   const [current, setCurrent] = useState(0);
 
   const images = [room2, room3, bg, bg2];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
@@ -29,7 +30,7 @@ const HomePage = () => {
         }}
       >
         <div className="hero-overlay">
-          <div className="hero-content fade-in">
+          <div className="hero-content">
             <h1 className="hero-title">
               We Create Amazing
               <br />
@@ -41,8 +42,17 @@ const HomePage = () => {
               your vision to life.
             </p>
             <div className="hero-buttons">
-              <button className="btn-primary">Start Your Project</button>
-              <button className="btn-secondary">View Projects</button>
+              <button
+                className="btn-primary"
+                onClick={() =>
+                  document
+                    .getElementById("contacts")
+                    .scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Start Your Project
+              </button>
+              <button className="btn-secondary" href="design">View Projects</button>
             </div>
           </div>
         </div>

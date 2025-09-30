@@ -11,10 +11,8 @@ import { IoBulbOutline } from "react-icons/io5";
 
 import "../assets/styles/About.css";
 
-// import room3 from "../assets/styles/room3.jpg";
-// import room4 from "../assets/styles/room4.jpg";
-
-// const images = [room3, room4];
+import room3 from "../assets/images/room3.jpg";
+import room4 from "../assets/images/room4.jpg";
 
 const About = () => {
   return (
@@ -23,11 +21,11 @@ const About = () => {
         <div className="about-us-images">
           <div className="main-image">
             {/* Replace with your image URL or local import */}
-            <img src="src/assets/images/room8.jpg" alt="Interior Design" />
+            <img src={room3} alt="Interior Design" />
           </div>
           <div className="sub-image">
             {/* Replace with your image URL or local import */}
-            <img src="src/assets/images/room4.jpg" alt="Interior Design Close-up" />
+            <img src={room4} alt="Interior Design Close-up" />
           </div>
         </div>
         <div className="about-us-content">

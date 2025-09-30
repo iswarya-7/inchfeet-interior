@@ -17,7 +17,7 @@
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  margin-top: -10px;
+  /* margin-top: -10px; */
 }
 
 .hero {
@@ -32,6 +32,8 @@
   will-change: transform;
   backface-visibility: hidden;
 }
+
+
 
 /* Fade animation */
 /* .fade-in {
