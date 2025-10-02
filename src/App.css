@@ -15,7 +15,7 @@ body {
 .whatsapp-float {
   margin-top: -40px;
   position: fixed; /* stays fixed on screen */
-  right: 5px; /* distance from the right edge */
+  right: 10px; /* distance from the right edge */
   top: 50%; /* vertical center */
   transform: translateY(-50%); /* true center */
   width: 50px;
@@ -57,16 +57,17 @@ body {
 
 /* free estimate */
 .estimate-float {
-  margin-top: -45px;
-  position: fixed; /* always visible */
-  right: 5px; /* distance from right edge */
-  top: 60%; /* slightly below WhatsApp button */
-  transform: translateY(-50%);
-  width: 130px; /* button width */
-  height: 50px; /* button height */
-  background-color: #ffffffac; /* choose a color that fits your theme */
-  color: #1c1c1c;
-  border-radius: 10px; /* rounded pill shape */
+  position: fixed;
+  right: 10px; 
+  top: 50%;
+
+  width: 130px; 
+  height: 50px; 
+
+  /* Styling */
+  background-color: #ffffffcd;
+  color: #000;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,28 +77,24 @@ body {
   z-index: 1000;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  /* animation: bounceEstimate 2.5s infinite; optional bounce */
   text-decoration: none;
+
+  white-space: nowrap;
 }
 
 .estimate-float:hover {
-  transform: translateY(-50%) scale(1.05);
-  background-color: white; /* slightly darker on hover */
+  transform: translateY(-50%) rotate(-90deg) scale(1.05);
+  background-color: white;
 }
 
-/* Optional bounce animation */
-@keyframes bounceEstimate {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(-50%) translateY(0);
-  }
-  40% {
-    transform: translateY(-50%) translateY(-6px);
-  }
-  60% {
-    transform: translateY(-50%) translateY(-3px);
+@media (max-width: 778px) {
+  .estimate-float {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    top: 58%;
+    transform: translateY(-50%) rotate(-90deg);
+    right: 0px;
+    margin-right: -30px;
   }
 }
