@@ -13,6 +13,7 @@ body {
 }
 
 .whatsapp-float {
+  margin-top: -40px;
   position: fixed; /* stays fixed on screen */
   right: 5px; /* distance from the right edge */
   top: 50%; /* vertical center */
@@ -56,14 +57,15 @@ body {
 
 /* free estimate */
 .estimate-float {
+  margin-top: -45px;
   position: fixed; /* always visible */
   right: 5px; /* distance from right edge */
   top: 60%; /* slightly below WhatsApp button */
   transform: translateY(-50%);
-  width: 150px; /* button width */
-  height: 60px; /* button height */
-  background-color: #1c1c1c; /* choose a color that fits your theme */
-  color: white;
+  width: 130px; /* button width */
+  height: 50px; /* button height */
+  background-color: #ffffffac; /* choose a color that fits your theme */
+  color: #1c1c1c;
   border-radius: 10px; /* rounded pill shape */
   display: flex;
   align-items: center;
@@ -74,13 +76,13 @@ body {
   z-index: 1000;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  animation: bounceEstimate 2.5s infinite; /* optional bounce */
+  /* animation: bounceEstimate 2.5s infinite; optional bounce */
   text-decoration: none;
 }
 
 .estimate-float:hover {
   transform: translateY(-50%) scale(1.05);
-  background-color: #2f2f2f; /* slightly darker on hover */
+  background-color: white; /* slightly darker on hover */
 }
 
 /* Optional bounce animation */
