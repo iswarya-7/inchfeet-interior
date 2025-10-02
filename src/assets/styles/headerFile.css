@@ -33,7 +33,7 @@
 
 /* Logo */
 .logo h1 {
-  font-size: 25px;
+  font-size: 27px;
   font-weight: bold;
   color: var(--primary);
   margin: 0;
@@ -47,7 +47,7 @@
   width: 150px;
 } */
 .logo p {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--secondary);
   margin-top: -3px;
 }

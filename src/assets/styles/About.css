@@ -33,6 +33,7 @@ body {
   max-width: 500px;
   height: 400px;
   margin-bottom: 2rem;
+  margin-top: 6rem;
 }
 
 .about-us-images img {
@@ -77,14 +78,16 @@ body {
   width: 100%;
   max-width: 600px;
   text-align: left;
+  margin-top: 6rem;
 }
 
 .main-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
   line-height: 1.2;
   margin-bottom: 1.5rem;
+  /* margin-top: 8rem; */
 }
 
 .description {
@@ -161,12 +164,20 @@ body {
 }
 @media (max-width: 768px) {
   .about-us-container {
-    padding-top: 6rem;
+    padding-top: 5rem;
+  }
+  .about-us-content .main-title  {
+    font-size: 2rem;
+   
+  }
+  .about-us-images{
+    margin-top: 0px;
   }
 
   .about-us-content {
     order: 1; /* Puts content (title/text) at the top */
     margin-bottom: 2rem; /* Add space between content and image */
+    margin-top: 0px;
   }
 
   .about-us-images {
@@ -175,11 +186,20 @@ body {
 }
 @media (max-width: 425px) {
   .about-us-container {
-    padding-top: 7rem;
+    padding-top: 4rem;
+  }
+  .about-us-images {
+    margin-top: 0px;
+  }
+  .about-us-content {
+    margin-top: 0px;
   }
 }
 @media (max-width: 320px) {
-  .about-us-container {
-    padding-top: 7rem;
+  .about-us-images {
+    margin-top: 0px;
+  }
+  .about-us-content {
+    margin-top: 0px;
   }
 }

@@ -20,7 +20,8 @@ const ProcessSection = () => {
     },
     {
       title: "3D Visualization",
-      description: "Visualize your dream space with realistic 3D designs.",
+      description:
+        "Turn imagination into reality with lifelike 3D designs. See your space from every angle before the transformation begins.",
       image: planning,
     },
     {
@@ -115,7 +116,18 @@ const ProcessSection = () => {
               <p className="content-description">
                 {currentStepData.description}
               </p>
-              <button className="cta-button">Book Free Design Session</button>
+              <button
+                className="cta-button"
+                onClick={(e) => {
+                  e.preventDefault(); // prevent page reload
+                  const section = document.getElementById("contacts");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                Book Free Design Session
+              </button>
             </div>
 
             <div className="illustration-container">

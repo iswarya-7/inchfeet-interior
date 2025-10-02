@@ -11,6 +11,7 @@ export default function HeaderFile() {
     { name: "About", href: "#about" },
     { name: "Service", href: "#services" },
     { name: "Products", href: "#products" },
+    { name: "Offers", href: "#offers" },
     { name: "Process", href: "#process" },
     { name: "Contact", href: "#contacts" },
   ];
@@ -37,7 +38,7 @@ export default function HeaderFile() {
             </a>
           ))}
           {/* Button is inside the nav for mobile, but styled separately for desktop */}
-          <button
+          {/* <button
             className="connect-btn"
             onClick={() => {
               setIsMenuOpen(false),
@@ -47,7 +48,7 @@ export default function HeaderFile() {
             }}
           >
             Connect Now!
-          </button>
+          </button> */}
         </nav>
 
         {/* Mobile Menu Toggle */}

@@ -1,0 +1,280 @@
+/* --- Color Palette (Elegant Grey - Minimal + Luxury Feel) --- */
+:root {
+  --primary-accent: #2f2f2f; /* Dark Charcoal */
+  --secondary-color: #4d4d4d; /* Medium Grey */
+  --bg-light: #f5f5f5; /* Light Grey White */
+  --button-color: #1c1c1c; /* Deep Black */
+  --text-dark: #333333; /* Main text color */
+  --text-light: #757575; /* Lighter text if needed */
+  --bg-main: #ffffff; /* White Card Background */
+  --border-clean: #e0e0e0; /* Clean Light Border */
+  --button-hover: #000000; /* Pure Black Hover */
+}
+
+/* ======================================= */
+/* 1. Header and Trust Badges */
+/* ======================================= */
+
+.offers-page-sections {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  padding: 6rem 3rem;
+  background-color: var(--bg-light);
+}
+
+.offers-header-containers {
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.offers-header-containers h1 {
+  font-size: 2.5rem;
+  /* font-weight: 800; */
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.offers-header-containers .subtitless {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+.trust-badgess {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.trust-badgess .trust-icon {
+  margin-top: 10px;
+}
+
+.trust-badgess svg {
+  margin-right: 8px;
+  color: var(--primary-accent);
+  font-size: 1.3rem;
+}
+
+/* ======================================= */
+/* 2. Package Comparison Grid */
+/* ======================================= */
+
+.packages-grids {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.package-cards {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-clean);
+  border-radius: 10px;
+  padding: 20px 40px;
+  transition: border-color 0.3s, transform 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.package-cards:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-accent);
+}
+
+/* Featured Card */
+.package-cards.featureds {
+  background-color: #fafafa;
+  border: 2px solid var(--primary-accent);
+  transform: scale(1.03);
+}
+
+.featured-badges {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--primary-accent);
+  color: white;
+  font-weight: 700;
+  padding: 6px 15px;
+  border-radius: 0 4px 0 4px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* --- Package Header --- */
+.package-headers h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.3rem;
+}
+
+.package-headers .taglines {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  min-height: 40px;
+}
+
+/* --- Price Block --- */
+.price-blocks {
+  padding: 25px 0;
+  border-top: 1px solid var(--border-clean);
+  border-bottom: 1px solid var(--border-clean);
+  margin: 25px 0;
+}
+
+.original-prices {
+  color: var(--text-light);
+  text-decoration: line-through;
+  font-size: 1rem;
+  display: block;
+}
+
+.offer-prices {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  display: block;
+  line-height: 1.2;
+}
+
+.price-notes {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 8px;
+}
+
+/* --- Features List --- */
+.features-lists {
+  flex-grow: 1;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.features-lists .descriptions {
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.features-lists ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features-lists li {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 0;
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.4;
+  border-bottom: 1px solid var(--border-clean);
+}
+.features-lists li:last-child {
+  border-bottom: none;
+}
+
+.feature-icons {
+  margin-right: 12px;
+  font-size: 1.1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Colors for icons */
+.features-lists .included .feature-icon {
+  color: var(--primary-accent);
+}
+.features-lists .excluded .feature-icon {
+  color: var(--border-clean);
+}
+
+/* --- CTA Button --- */
+.contact-buttons {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background-color: var(--button-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: auto;
+  border: 1px solid var(--button-color);
+  text-transform: uppercase;
+  margin-left: -10px;
+}
+
+.contact-buttons:hover {
+  background-color: var(--button-hover);
+  border-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+/* Featured button style */
+.package-cards.featureds .contact-buttons {
+  background-color: var(--bg-main);
+  color: var(--primary-accent);
+  border: 2px solid var(--primary-accent);
+}
+.package-cards.featureds .contact-buttons:hover {
+  background-color: var(--primary-accent);
+  color: white;
+}
+
+/* ======================================= */
+/* 3. Responsive Adjustments */
+/* ======================================= */
+
+@media (max-width: 992px) {
+  .packages-grids {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .package-cards.featureds {
+    transform: scale(1);
+  }
+}
+@media (max-width: 768px) {
+  .offers-header-containers h1 {
+    font-size: 2rem;
+  }
+  .package-headers h1{
+    font-size: 1.8px;
+  }
+  .offer-prices{
+    font-size: 1.4rem;
+  }
+  .trust-badgess{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+  }
+}
+@media (max-width: 576px) {
+  .offers-header-containers h1 {
+    font-size: 2rem;
+  }
+  .offers-page-sections {
+    padding: 3rem 1rem;
+  }
+  .contact-buttons {
+    font-size: 0.8rem;
+  }
+}

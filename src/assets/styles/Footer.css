@@ -72,15 +72,15 @@ body {
 }
 
 .footer-title {
-  font-size: 1.875rem;
+  font-size: 1.675rem;
   font-weight: 700;
   color: var(--background);
   margin-bottom: 16px;
 }
 
-.footer-subtitle {
+.footer-subtitles {
   font-size: 0.89rem;
-  color: var(--background);
+  color: var(--muted-foreground);
   margin-bottom: 32px;
   margin-top: -15px;
 }
@@ -255,4 +255,30 @@ body {
   .footer-bottom {
     padding-top: 60px;
   }
+}
+
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;         /* distance from bottom */
+  right: 20px;          /* distance from right */
+  width: 45px;
+  height: 45px;
+  background-color: var(--card-foreground); /* match footer theme */
+  color: white;
+  border-radius: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.1);
+  background-color: var(--card-foreground); /* slightly darker on hover */
 }

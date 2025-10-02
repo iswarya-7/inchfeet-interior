@@ -52,7 +52,19 @@ const HomePage = () => {
               >
                 Start Your Project
               </button>
-              <button className="btn-secondary" href="design">View Projects</button>
+              <button
+                className="btn-secondary"
+                href="design"
+                onClick={(e) => {
+                  e.preventDefault(); // prevent page reload
+                  const section = document.getElementById("design");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                View Projects
+              </button>
             </div>
           </div>
         </div>

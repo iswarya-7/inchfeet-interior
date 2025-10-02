@@ -12,7 +12,11 @@ export function Footer() {
 
   const socialLinks = [
     { icon: FaFacebookF, href: "#", label: "Facebook" },
-    { icon: FaInstagram, href: "https://www.instagram.com/inchfeetinterior/", label: "Instagram" },
+    {
+      icon: FaInstagram,
+      href: "https://www.instagram.com/inchfeetinterior/",
+      label: "Instagram",
+    },
     { icon: FaTwitter, href: "#", label: "Twitter" },
     { icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
   ];
@@ -20,17 +24,22 @@ export function Footer() {
   const companyLinks = [
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Process", href: "#process" },
     { name: "Featured Products", href: "#products" },
-    { name: "Contact", href: "#contact" },
+    { name: "Offers", href: "#offers" },
+    { name: "Process", href: "#process" },
+    { name: "Contact", href: "#contacts" },
   ];
 
   const serviceLinks = [
-    { name: "Residential Design", href: "#" },
-    { name: "Commercial Projects", href: "#" },
-    { name: "Lighting Designs", href: "#" },
-    { name: "Consultations", href: "#" },
+    { name: "Residential Design", href: "#services" },
+    { name: "Commercial Projects", href: "#services" },
+    { name: "Lighting Designs", href: "#services" },
+    { name: "Design Packages", href: "#offers" },
   ];
+
+
+
+  
 
   return (
     <footer className="footer">

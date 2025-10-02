@@ -64,7 +64,18 @@ const About = () => {
             <p>Home Renovation</p>
           </div> */}
           </div>
-          <button className="discover-button">Discover More</button>
+          <button
+            className="discover-button"
+            onClick={(e) => {
+              e.preventDefault(); // prevent page reload
+              const section = document.getElementById("design");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            Discover More
+          </button>
         </div>
       </div>
     </section>

@@ -1,13 +1,13 @@
 /* --- Elegant Grey Theme Variables --- */
 :root {
-  --primary-color: #2F2F2F;       /* Dark Charcoal */
-  --secondary-color: #4D4D4D;     /* Medium Grey */
-  --background-color: #F5F5F5;    /* Light Grey White */
-  --button-color: #1C1C1C;        /* Deep Black */
-  --text-color: #333333;          /* Main Text */
-  --text-light: #757575;          /* Lighter Text */
-  --border-color: #ddd;           /* Input borders */
-  --form-bg: #fff;                /* Form background */
+  --primary-color: #2f2f2f; /* Dark Charcoal */
+  --secondary-color: #4d4d4d; /* Medium Grey */
+  --background-color: #f5f5f5; /* Light Grey White */
+  --button-color: #1c1c1c; /* Deep Black */
+  --text-color: #333333; /* Main Text */
+  --text-light: #757575; /* Lighter Text */
+  --border-color: #ddd; /* Input borders */
+  --form-bg: #fff; /* Form background */
 }
 
 /* --- Contact Section --- */
@@ -19,7 +19,6 @@
   padding: 4rem 2rem;
   background-color: var(--background-color);
   text-align: center;
-  
 }
 
 .contact-header {
@@ -185,6 +184,11 @@
 
   .detail-item p {
     text-align: left;
+  }
+}
+@media(max-width:768px){
+  .section-titles{
+    font-size: 2rem;
   }
 }
 

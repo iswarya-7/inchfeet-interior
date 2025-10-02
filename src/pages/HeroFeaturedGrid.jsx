@@ -131,7 +131,18 @@ const HeroFeaturedGrid = () => {
           <div className="hero-contents">
             <h3 className="hero-titles">{heroProduct.title}</h3>
             <p className="hero-descriptions">{heroProduct.description}</p>
-            <button className="hero-cta-buttons">Book Free Consultation</button>
+            <button
+              className="hero-cta-buttons"
+              onClick={(e) => {
+                e.preventDefault(); // prevent page reload
+                const section = document.getElementById("contacts");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              Book Free Consultation
+            </button>
           </div>
           <img
             src={heroProduct.image}

@@ -78,12 +78,13 @@
 }
 
 .hero-cta-buttons {
-  padding: 12px 25px;
+  padding: 15px 25px;
   background-color: var(--button-color); /* Deep Black */
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 0.9rem;
   font-weight: 600;
   transition: background-color 0.3s;
 }
@@ -132,17 +133,17 @@
 }
 
 .secondary-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 650;
-  margin-bottom: 15px;
-  margin-top: -10px;
-  color: var(--text-dark);
+  /* margin-top: 15px; */
+  color: var(--bg-light);
 }
 
 .secondary-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: -20px;
 }
 
 .secondary-price {
@@ -320,6 +321,15 @@
 }
 
 @media (max-width: 768px) {
+  .section-titlee {
+    font-size: 2rem;
+  }
+  .hero-titles {
+    font-size: 1.7rem;
+  }
+  .hero-descriptions {
+    font-size: 1rem;
+  }
   .secondary-products-grid {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -355,6 +365,13 @@
   .secondary-price {
     color: var(--primary-accent);
   }
+  .secondary-title {
+    color: var(--primary-accent);
+  } 
+  .section-subtitlee{
+    padding-top:8px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -385,6 +402,9 @@
     align-items: center;
     width: 100%;
     padding-right: 5px;
+  }
+  .secondary-title {
+    color: var(--primary-accent);
   }
   .secondary-price {
     font-size: 1.1rem;
