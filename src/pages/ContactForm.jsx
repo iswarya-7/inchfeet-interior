@@ -87,7 +87,11 @@ const ContactForm = () => {
             {" "}
             <a
               href="mailto:projects@inchfeet.in"
-              style={{ textDecoration: "none",color:"#1c1c1c",cursor:"pointer" }}
+              style={{
+                textDecoration: "none",
+                color: "#1c1c1c",
+                cursor: "pointer",
+              }}
             >
               projects@inchfeet.in
             </a>{" "}
