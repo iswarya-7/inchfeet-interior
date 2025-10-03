@@ -75,7 +75,7 @@ const ContactForm = () => {
       <div className="contact-detail-bar">
         <div className="detail-item">
           <FaMapMarkerAlt />
-          <p>123 Design Studio, Main Street, City Name</p>
+          <p>18, Shantha Avenue, Nerkundram, Chennai-600107</p>
         </div>
         <div className="detail-item">
           <FaPhone />
@@ -83,7 +83,15 @@ const ContactForm = () => {
         </div>
         <div className="detail-item">
           <FaEnvelope />
-          <p>hello@luxedesign.com</p>
+          <p>
+            {" "}
+            <a
+              href="mailto:projects@inchfeet.in"
+              style={{ textDecoration: "none",color:"#1c1c1c",cursor:"pointer" }}
+            >
+              projects@inchfeet.in
+            </a>{" "}
+          </p>
         </div>
         {/* Removed: <div className="social-links">...</div> */}
       </div>

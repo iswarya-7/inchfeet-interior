@@ -237,6 +237,8 @@
   color: white;
 }
 
+
+
 /* ======================================= */
 /* 3. Responsive Adjustments */
 /* ======================================= */
@@ -251,20 +253,44 @@
   }
 }
 @media (max-width: 768px) {
+  .features-lists.hide {
+    display: none;
+  }
+  .features-lists.show {
+    display: block;
+  }
+
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: var(--primary-accent);
+    font-weight: 600;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    text-decoration: underline;
+
+  }
+
   .offers-header-containers h1 {
     font-size: 2rem;
   }
-  .package-headers h1{
+  .package-headers h1 {
     font-size: 1.8px;
   }
-  .offer-prices{
+  .offer-prices {
     font-size: 1.4rem;
   }
-  .trust-badgess{
+  .trust-badgess {
     display: flex;
     flex-direction: column;
     gap: 25px;
-
+  }
+  .view-more-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.85rem;
+    border-radius: 8px;
   }
 }
 @media (max-width: 576px) {

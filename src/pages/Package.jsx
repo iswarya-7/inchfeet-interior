@@ -1,16 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/styles/OffersPage.css";
-
-// Import Icons for trust badges (you can customize these)
 import { FaShieldAlt, FaWarehouse, FaCalendarCheck } from "react-icons/fa";
-import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
-// Using FaRegCircle, FaRegCheckCircle for a softer look
 import { FaRegCircle, FaRegCheckCircle } from "react-icons/fa";
 
 const packageData = [
   {
-    id: "essentials",
-    name: "The Essentials",
+    id: "essenza",
+    name: "The Essenza",
     tagline: "Ideal for single-room makeovers & budget-conscious clients.",
     isFeatured: false,
     price: "₹ 4,99,000",
@@ -65,8 +61,8 @@ const packageData = [
     ],
   },
   {
-    id: "signature",
-    name: "The Signature",
+    id: "elevare",
+    name: "The Elevare",
     tagline: "The complete, full-service package for 2/3 BHK homes.",
     isFeatured: true, // This one is highlighted
     price: "₹ 11,41,000",
@@ -119,8 +115,8 @@ const packageData = [
     ],
   },
   {
-    id: "bespoke",
-    name: "The Bespoke",
+    id: "signature",
+    name: "The Signature",
     tagline:
       "Luxury, end-to-end design for large villas and personalized projects.",
     isFeatured: false,
@@ -174,11 +170,18 @@ const packageData = [
     ],
   },
 ];
-
 const Package = () => {
+  const [expanded, setExpanded] = useState({}); // track expanded cards
+
+  const toggleExpand = (id) => {
+    setExpanded((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
   return (
     <section className="offers-page-sections" id="offers">
-      {/* --- 1. Header (Trust & Urgency) --- */}
       <div className="offers-header-containers">
         <h1>Unlock Your Dream Home: Exclusive Design Packages</h1>
         <p className="subtitless">
@@ -186,7 +189,6 @@ const Package = () => {
           size. Get started today!
         </p>
 
-        {/* Trust Badges */}
         <div className="trust-badgess">
           <div>
             <FaShieldAlt /> 10-Year Warranty
@@ -198,67 +200,77 @@ const Package = () => {
             <FaCalendarCheck /> On-Time Guarantee
           </div>
         </div>
-
-        {/* Optional: Urgency Timer */}
-        {/* <div className="urgency-banner">Offer Ends in: 4 Days 12 Hours.</div> */}
       </div>
 
-      {/* --- 2. Package Comparison Grid --- */}
       <div className="packages-grids">
-        {packageData.map((pkg) => (
-          <div
-            key={pkg.id}
-            className={`package-cards ${pkg.isFeatured ? "featureds" : ""}`}
-          >
-            {pkg.isFeatured && (
-              <div className="featured-badges">MOST POPULAR</div>
-            )}
+        {packageData.map((pkg) => {
+          const isExpanded = expanded[pkg.id] || false;
 
-            <div className="package-headers">
-              <h3>{pkg.name}</h3>
-              <p className="taglines">{pkg.tagline}</p>
-            </div>
-
-            <div className="price-blocks">
-              <span className="original-prices">{pkg.originalPrice}</span>
-              <span className="offer-prices">{pkg.price}</span>
-              <p className="price-notes">
-                *Estimated starting price. Final cost based on customization.
-              </p>
-            </div>
-
-            <div className="features-lists">
-              <p className="descriptions">{pkg.description}</p>
-              <ul>
-                {pkg.features.map((feature) => (
-                  <li
-                    key={feature.id}
-                    className={feature.included ? "includeds" : "excludeds"}
-                  >
-                    <feature.icon className="feature-icons" />
-                    {feature.text}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <a
-              href="#contacts"
-              onClick={(e) => {
-                e.preventDefault(); // prevent page reload
-                const section = document.getElementById("contacts");
-                if (section) {
-                  section.scrollIntoView({ behavior: "smooth" });
-                }
-              }}
-              className="contact-buttons"
+          return (
+            <div
+              key={pkg.id}
+              className={`package-cards ${pkg.isFeatured ? "featureds" : ""}`}
             >
-              {pkg.id === "bespoke"
-                ? "REQUEST QUOTE"
-                : "BOOK FREE CONSULTATION"}
-            </a>
-          </div>
-        ))}
+              {pkg.isFeatured && (
+                <div className="featured-badges">MOST POPULAR</div>
+              )}
+
+              <div className="package-headers">
+                <h3>{pkg.name}</h3>
+                <p className="taglines">{pkg.tagline}</p>
+              </div>
+
+              <div className="price-blocks">
+                <span className="original-prices">{pkg.originalPrice}</span>
+                <span className="offer-prices">{pkg.price}</span>
+                <p className="price-notes">
+                  *Estimated starting price. Final cost based on customization.
+                </p>
+              </div>
+
+              {/* Features - only show on desktop OR if expanded */}
+              <div className={`features-lists ${isExpanded ? "show" : "hide"}`}>
+                {/* Description */}
+                <p className="descriptions">{pkg.description}</p>
+                <ul>
+                  {pkg.features.map((feature) => (
+                    <li
+                      key={feature.id}
+                      className={feature.included ? "includeds" : "excludeds"}
+                    >
+                      <feature.icon className="feature-icons" />
+                      {feature.text}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Toggle Button (only visible on mobile) */}
+              <button
+                className="toggle-btn"
+                onClick={() => toggleExpand(pkg.id)}
+              >
+                {isExpanded ? "View Less" : "View More"}
+              </button>
+
+              <a
+                href="#contacts"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const section = document.getElementById("contacts");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="contact-buttons"
+              >
+                {pkg.id === "signature"
+                  ? "REQUEST QUOTE"
+                  : "BOOK FREE CONSULTATION"}
+              </a>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

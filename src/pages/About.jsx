@@ -5,6 +5,8 @@ import {
   FaDrawPolygon,
   FaBuilding,
 } from "react-icons/fa";
+import { FaCouch } from "react-icons/fa";
+
 import { FiHome } from "react-icons/fi";
 import { LuBuilding2 } from "react-icons/lu";
 import { IoBulbOutline } from "react-icons/io5";
@@ -51,8 +53,8 @@ const About = () => {
               <p>Residential Design</p>
             </div>
             <div className="service-item">
-              <IoBulbOutline className="service-icon" />
-              <p>Lighting Design</p>
+              <FaCouch className="service-icon" />
+              <p>Custom Furniture</p>
             </div>
 
             <div className="service-item">
