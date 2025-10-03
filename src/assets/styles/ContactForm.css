@@ -186,9 +186,12 @@
     text-align: left;
   }
 }
-@media(max-width:768px){
-  .section-titles{
+@media (max-width: 768px) {
+  .section-titles {
     font-size: 2rem;
+  }
+  .cta-button-contact {
+    font-size: 0.9rem;
   }
 }
 

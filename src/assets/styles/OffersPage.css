@@ -237,8 +237,6 @@
   color: white;
 }
 
-
-
 /* ======================================= */
 /* 3. Responsive Adjustments */
 /* ======================================= */
@@ -269,7 +267,6 @@
     cursor: pointer;
     font-size: 0.95rem;
     text-decoration: underline;
-
   }
 
   .offers-header-containers h1 {
@@ -291,6 +288,11 @@
     padding: 10px;
     font-size: 0.85rem;
     border-radius: 8px;
+  }
+  .contact-buttons {
+    width: 90%;
+    font-size: 0.7rem;
+    margin-left: -1px;
   }
 }
 @media (max-width: 576px) {
